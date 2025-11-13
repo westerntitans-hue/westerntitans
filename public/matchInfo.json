@@ -1,1 +1,88 @@
-{"matches": [{"date": "16/11/2025", "time": "10:50", "opponent": "Silly Mid-On", "venue": "Monfarville Reserve 1, North St Marys"}, {"date": "23/11/2025", "time": "10:50", "opponent": "The 8 Bakchodi's", "venue": "Darling Street Park"}, {"date": "30/11/2025", "time": "13:10", "opponent": "Black Tigers", "venue": "Ashley Brown Reserve, Lalor Park"}]}
+{
+  "matches": [
+    {
+      "date": "23/11/2025",
+      "time": "10:50",
+      "opponent": "The 8 Bakchodi's",
+      "venue": "Darling Street Park"
+    },
+    {
+      "date": "30/11/2025",
+      "time": "13:10",
+      "opponent": "Black Tigers",
+      "venue": "Ashley Brown Reserve, Lalor Park"
+    },
+    {
+      "date": "07/12/2025",
+      "time": "08:30",
+      "opponent": "Punjab Lions",
+      "venue": "Monfarville Reserve 2, North St Marys"
+    },
+    {
+      "date": "14/12/2025",
+      "time": "13:10",
+      "opponent": "8 Ball Overs",
+      "venue": "Darling Street Park"
+    },
+    {
+      "date": "21/12/2025",
+      "time": "08:30",
+      "opponent": "Silly Mid-On",
+      "venue": "Darling Street Park"
+    },
+    {
+      "date": "11/01/2026",
+      "time": "10:50",
+      "opponent": "The 8 Bakchodi's",
+      "venue": "Monfarville Reserve 1, North St Marys"
+    },
+    {
+      "date": "18/01/2026",
+      "time": "13:10",
+      "opponent": "8 Ball Overs",
+      "venue": "Ashley Brown Reserve, Lalor Park"
+    },
+    {
+      "date": "25/01/2026",
+      "time": "10:50",
+      "opponent": "Punjab Lions",
+      "venue": "Monfarville Reserve 2, North St Marys"
+    },
+    {
+      "date": "01/02/2026",
+      "time": "08:30",
+      "opponent": "8 Ball Overs",
+      "venue": "Monfarville Reserve 2, North St Marys"
+    },
+    {
+      "date": "08/02/2026",
+      "time": "10:50",
+      "opponent": "Silly Mid-On",
+      "venue": "Monfarville Reserve 2, North St Marys"
+    },
+    {
+      "date": "15/02/2026",
+      "time": "08:30",
+      "opponent": "The 8 Bakchodi's",
+      "venue": "Monfarville Reserve 1, North St Marys"
+    },
+    {
+      "date": "22/02/2026",
+      "time": "08:30",
+      "opponent": "Black Tigers",
+      "venue": "Monfarville Reserve 1, North St Marys"
+    },
+    {
+      "date": "22/02/2026",
+      "time": "10:50",
+      "opponent": "Punjab Lions",
+      "venue": "Monfarville Reserve 1, North St Marys"
+    },
+    {
+      "date": "01/03/2026",
+      "time": "10:50",
+      "opponent": "Silly Mid-On",
+      "venue": "Monfarville Reserve 1, North St Marys"
+    }
+  ]
+}
