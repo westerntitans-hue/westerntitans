@@ -10,6 +10,8 @@ export default async function handler(req, res) {
     const REPO_OWNER = process.env.REPO_OWNER || 'westerntitans-hue';
     const REPO_NAME = process.env.REPO_NAME || 'reactWT';
     
+    console.log('Token exists:', !!GITHUB_TOKEN);
+    
     if (!GITHUB_TOKEN) {
       console.log('Squad update (no GitHub token):', { captain, players });
       return res.status(200).json({ success: true, message: 'Squad updated (logged)' });
@@ -20,10 +22,16 @@ export default async function handler(req, res) {
     
     const getResponse = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/public/squadInfo.json`, {
       headers: {
-        'Authorization': `token ${GITHUB_TOKEN}`,
+        'Authorization': `Bearer ${GITHUB_TOKEN}`,
         'Accept': 'application/vnd.github.v3+json'
       }
     });
+    
+    console.log('Get response status:', getResponse.status);
+    if (!getResponse.ok) {
+      const getError = await getResponse.text();
+      console.log('Get file error:', getError);
+    }
     
     let sha = '';
     if (getResponse.ok) {
@@ -34,7 +42,7 @@ export default async function handler(req, res) {
     const updateResponse = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/public/squadInfo.json`, {
       method: 'PUT',
       headers: {
-        'Authorization': `token ${GITHUB_TOKEN}`,
+        'Authorization': `Bearer ${GITHUB_TOKEN}`,
         'Accept': 'application/vnd.github.v3+json',
         'Content-Type': 'application/json'
       },
@@ -48,7 +56,13 @@ export default async function handler(req, res) {
     if (updateResponse.ok) {
       res.status(200).json({ success: true });
     } else {
-      throw new Error('GitHub API update failed');
+      const errorData = await updateResponse.text();
+      console.error('GitHub API details:', {
+        status: updateResponse.status,
+        statusText: updateResponse.statusText,
+        error: errorData
+      });
+      throw new Error(`GitHub API update failed: ${updateResponse.status}`);
     }
     
   } catch (error) {
